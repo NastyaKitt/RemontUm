@@ -1,0 +1,631 @@
+html {
+    font-size: 16px;
+}
+body {
+    font-family: "Unbounded";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+h1,h2,h3,p {
+    margin: 0;
+}
+h1 {
+    font-size: 2rem;
+}
+input, button {
+    font-family: "Unbounded";
+}
+button {
+    cursor: pointer;
+}
+header{
+    width: calc(100% - 20rem);
+    height: 4rem;
+    padding: 0 10rem;
+    background-color: #3767B8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & h1 {
+        font-weight: 500;
+    }
+}
+/* ----------------------HEro */
+.heroSection {
+    width: 100%;
+    height: 50rem;
+    background-image: url(img/main.jpeg);
+    background-size: cover;
+    & .blueBack {
+        width: calc(55% - 4rem);
+        padding: 10rem 4rem 5rem 0 ;
+        height: calc(100% - 15rem);
+        background-color: #3766b871;
+        float: right;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        & h1 {
+            font-size: 2.25rem;
+        }
+        & p {
+            font-size: 1.5rem;
+        }
+        & button {
+            width: 26rem;
+            height: 5rem;
+            background-color: #fff;
+            border: none;
+            font-size: 1.5rem;
+            color: #3767B8;
+            border-radius: 1rem;
+            &:hover {
+                background-color: #aad2ff;
+                transition: all 1s;
+                color: rgb(100, 100, 100);
+                box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2);
+            }
+            &:active {
+                background-color: #80bbff;
+                transition: all 1s;
+                color: rgb(27, 27, 27);
+                box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2) inset;
+            }
+        }
+    }
+}
+/* ---------------------ВЫБРАТЬ НАС */
+.whyUs {
+    background-color: #3767B8;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    & .becauseList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+        & .becauseItem {
+            width: 30%;
+            margin-bottom: 2rem;
+            & h2 {
+                font-weight: 400;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+/* ---------------------------------price */
+.price {
+    width: 100%;
+    text-align: center;
+    & h1 {
+        background-color: #3767B8;
+        padding-bottom: 1rem;
+    }
+    & .priceList {
+        width: calc(100% - 20rem);
+        padding: 0 10rem;
+        display: flex;
+        justify-content: space-between;
+        & .priceItem {
+            background-color: #3767B8;
+            width: 18.5rem;
+            padding: 2rem 2rem;
+            height: 33.5rem;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            & h2 {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            & p {
+                text-align: left;
+                font-weight: 300;
+            }
+            & button {
+                height: 5rem;
+                width: 15rem;
+                background-color: transparent;
+                border: 2px solid #fff;
+                border-radius: 1.5rem;
+                color: #fff;
+                font-size: 1.3rem;
+                &:hover {
+                    background-color: #aad2ff;
+                    transition: all 1s;
+                    color: rgb(100, 100, 100);
+                    box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2);
+                }
+                &:active {
+                    background-color: #80bbff;
+                    transition: all 1s;
+                    color: rgb(27, 27, 27);
+                    box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2) inset;
+                }
+    
+            }
+        }
+    }
+}
+/* ________________Портфолио */
+.portfolio {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .slider {
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        display: grid;
+        justify-items: center;
+    }    
+    & h1 {
+        width: 100%;
+        background-color: #3767B8;
+        padding: 1rem 0;
+    }
+    & .primer {
+        width: calc(100% - 20rem);
+        border-radius: 2rem;
+        border: #3767B8 2px solid;
+        margin: 2rem 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        display: none;
+        color: #3767B8;
+        &.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        & .primerKartinka {
+            width: 50%;
+            & img {
+                width: calc(100% - 2rem);
+                height: calc(40rem - 2rem);
+                padding: 1rem;
+                border-radius: 2rem;
+            }
+        }
+        & .primerText {
+            width: calc(50% - 2rem);
+            height: calc(100% - 2rem);
+            padding: 1rem;
+            text-align: left;
+            & h2 {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            & p {
+                margin-bottom: 2rem;
+                color: #000;
+                & b {
+                    color: #3767B8;
+                }
+            }
+        }
+    }
+}
+/* ------------------отзывы */
+.reviews {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3767B8;
+    & .form {
+        width: calc(62.5rem - 4rem);
+        padding: 2rem 2rem;
+        height: calc(15rem - 4rem);
+        border: 5px solid #3767B8;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 5rem 0;
+        & h2 {
+            font-size: 2rem;
+        }
+        & form {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            & input {
+                width: 14rem;
+                padding-left: 1rem;
+                height: 4rem;
+                border: #3767B8 1px solid;
+                &.ok {
+                    background-color: #3767B8;
+                    border: none;
+                    font-size: 1.2rem;
+                    color: #fff;
+                    &:hover {
+                        background-color: #aad2ff;
+                        transition: all 1s;
+                        color: rgb(100, 100, 100);
+                        box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2);
+                    }
+                    &:active {
+                        background-color: #80bbff;
+                        transition: all 1s;
+                        color: rgb(27, 27, 27);
+                        box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2) inset;
+                    }
+    
+                }
+            }
+        }
+    }
+    .reviewss {
+        width: calc(100% - 20rem);
+        display: flex;
+        padding: 0 10rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & button {
+            width: 4rem ;
+            height:4rem  ;
+            background-color: #3767B8;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            &:hover {
+                background-color: #aad2ff;
+                transition: all 1s;
+                color: rgb(100, 100, 100);
+                box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2);
+            }
+            &:active {
+                background-color: #80bbff;
+                transition: all 1s;
+                color: rgb(27, 27, 27);
+                box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2) inset;
+            }
+
+        }
+        & .review {
+            width: calc(62.5rem - 8rem);
+            padding: 2rem 2rem;
+            margin: 4rem 2rem;
+            height: calc(40rem - 4rem);
+            border-radius: 2rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            border: 2px solid #3767B8;
+            & img {
+                width: 25rem;
+                height: 25rem;
+                border-radius: 50%;
+            }
+            &.active {
+                display: flex;
+            }
+        }
+    }
+}
+/* -------------------generalMan */
+.generalMan {
+    width: calc(100% - 20rem);
+    padding: 0 10rem;
+    height: 44rem;
+    background-color: #3767B8;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    & .generalLeft {
+        width: 30rem;
+        height: 30rem;
+        border: 10px solid #fff;
+        transform: rotate(10deg);
+        & img {
+            transform: rotate(-10deg);
+            width: 30rem;
+            height: 30rem;
+        }
+    }
+    & .generalRight {
+        width: calc(50% - 4rem);
+        padding: 4rem 0 0;
+        & span {
+            text-align: center;
+            font-weight: 300;
+        }
+        & p {
+            margin-top: 1rem;
+            letter-spacing: 0.1rem;
+            line-height: 2rem;
+        }
+
+    }
+}
+.podGeneralMan {
+    width: 100%;
+    background-color: #3767B8;
+    text-align: center;
+    & button {
+        width: 30rem;
+        height: 5rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: #fff;
+        font-size: 1.3rem;
+        color: #3767B8;
+        margin-bottom: 2rem;
+        &:hover {
+            background-color: #aad2ff;
+            transition: all 1s;
+            color: rgb(100, 100, 100);
+            box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2);
+        }
+        &:active {
+            background-color: #80bbff;
+            transition: all 1s;
+            color: rgb(27, 27, 27);
+            box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2) inset;
+        }
+
+    }
+}
+/* ------------------footer */
+footer {
+    width: calc(100% - 20rem);
+    padding: 0 10rem;
+    height: 20rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #3767B8;
+    & .config {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        & .configLeft {
+            text-align: left;
+            & p {
+                padding: 0.5rem 0;
+            }
+        }
+        & .configRight {
+            text-align: right;
+            & p {
+                padding: 0.5rem 0;
+            }
+            & button {
+                background-color: transparent;
+                border: none;
+                color: #fff;
+            }
+        }
+    }
+}
+/* ----------------formPopup */
+.formPopup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000a4;
+    display: none;
+    align-items: center;
+    justify-items: center;
+    z-index: 999;
+    &.showForm {
+        display: grid;
+    }
+    & button {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        &:hover{
+            transform: rotate(90deg);
+            transition: all 1s;
+            & path{
+                fill: #3767B8;
+                transition: all 1s;
+
+            }
+        }
+        &:active{
+            transform: rotate(180deg) scale(0.8);
+            transition: all 0.1s;
+            & path{
+                fill: #4f88e9;
+                transition: all 0.1s;
+
+            }
+        }
+    }
+    & .popuppWIn {
+        color: #3767B8;
+        height: calc(100% - 20rem);
+        width: calc(100% - 20rem);
+        padding: 2rem;
+        border-radius: 2rem;
+        background-color: #fff;
+        position: relative;
+        & img {
+            height: 30rem;
+            width: 30rem;
+            position: absolute;            
+            right: 10%;
+            top:10%;
+        }
+        & form {
+            height: 80%;
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            & input {
+                height: 4rem;
+                width: 50%;
+                font-size: 1.1rem;
+                background-color: #3767B8;
+                color: #fff;
+                border: none;
+                padding-left: 1rem;
+                &:hover {
+                    background-color: #aad2ff;
+                    transition: all 1s;
+                    color: rgb(100, 100, 100);
+                    box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2);
+                }
+                &:focus {
+                    background-color: #80bbff;
+                    transition: all 1s;
+                    color: rgb(27, 27, 27);
+                    box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2) inset;
+                }
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+/* --------------------popupPrice */
+.formPricePopup0, .formPricePopup1 ,.formPricePopup2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    background-color: #00000093;
+    z-index: 998;
+    &.showPrice {
+        display: grid;
+    }
+    & .closeprice {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        border: none;
+        background-color: transparent;
+        &:hover{
+            transform: rotate(90deg);
+            transition: all 1s;
+            & path{
+                fill: #3767B8;
+                transition: all 1s;
+
+            }
+        }
+        &:active{
+            transform: rotate(180deg) scale(0.8);
+            transition: all 0.1s;
+            & path{
+                fill: #4f88e9;
+                transition: all 0.1s;
+
+            }
+        }
+    }
+    & .zakazat {
+        width: 26rem;
+        height: 5rem;
+        background-color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        color: #3767B8;
+        border-radius: 1rem;
+        &:hover {
+            background-color: #aad2ff;
+            transition: all 1s;
+            color: rgb(100, 100, 100);
+            box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2);
+        }
+        &:active {
+            background-color: #80bbff;
+            transition: all 1s;
+            color: rgb(27, 27, 27);
+            box-shadow: 4px 4px 38px 0px rgba(34, 60, 80, 0.2) inset;
+        }
+    }
+    & .popupPrice {
+        width: calc(100% - 20rem);
+        height: auto;
+        background-color: #fff;
+        padding: 1rem;
+        color: #3767B8;
+        text-align: center;
+        & h1 {
+            margin-bottom: 2rem;
+        }
+        & .priceList {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+    }
+}
+/* ---------------politicPopup */
+.politicPopup {
+    width: 100%;
+    height: 100%;
+    background-color: #00000077;
+    position: fixed;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    z-index: 997;
+
+    &.showPolitic{
+        display: grid;
+    }
+    & button {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        background-color: transparent;
+        border: none;
+        &:hover{
+            transform: rotate(90deg);
+            transition: all 1s;
+            & path{
+                fill: #3767B8;
+                transition: all 1s;
+
+            }
+        }
+        &:active{
+            transform: rotate(180deg) scale(0.8);
+            transition: all 0.1s;
+            & path{
+                fill: #4f88e9;
+                transition: all 0.1s;
+
+            }
+        }
+    }
+    & .politicWin {
+        width: calc(100% - 20rem);
+        height: calc(100% - 10rem);
+        background-color: #fff;
+        color: #3767B8;
+        padding: 1rem;
+        overflow-y: scroll;
+        & p {
+            line-height: 1.5rem;
+        }
+    }
+}
